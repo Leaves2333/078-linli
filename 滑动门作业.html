@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>小游戏介绍</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{padding:40px}
+.da-biao-ti{
+  width: 220px;
+  height:40px;
+  background:#6699ff;
+  color:#fff;
+  line-height:40px;
+  text-align:center;
+  cursor:pointer;
+  margin-bottom:4px;
+}
+.erjihezi{
+  position: absolute;
+  top: 45px;
+  background-color: rgb(255 255 255 / 0.9);
+  padding: 0;
+  height: 0px;
+  overflow: hidden;
+  transition: all 300ms linear;
+  width:220px;
+  border:1px solid #ccc;
+}
+.erjihezi a{
+  display:block;
+  color: black;
+  font-size: 16px;
+  line-height: 40px;
+  padding-left:12px;
+  text-decoration: none;
+}
+.erjihezi.open{
+  height:80px;
+}
+</style>
+</head>
+<body>
+<div style="position:relative;">
+  <div class="da-biao-ti" onclick="toggle('jingji')">竞技</div>
+  <div class="erjihezi" id="jingji">
+    <a href="https://www.4399.com/flash/7244.htm#search3-f116">五子棋</a >
+    <a href="https://www.4399.com/flash/225171.htm#search3-3da0">消灭星星消消乐</a >
+  </div>
+</div>
+
+<div style="position:relative;margin-top:100px;">
+  <div class="da-biao-ti" onclick="toggle('zhiyu')">治愈</div>
+  <div class="erjihezi" id="zhiyu">
+    <a href="https://www.4399.com/flash/10809.htm#search3-5b2e">鲜花七日养成</a >
+    <a href="https://www.4399.com/flash/42293.htm#search3-ca5d">小熊涂色</a >
+  </div>
+</div>
+
+<script>
+function toggle(id){
+  let box = document.getElementById(id)
+  box.classList.toggle('open')
+}
+</script>
+</body>
+</html>
